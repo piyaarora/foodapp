@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import { Container, Row, Col,Card, Button, CardTitle, CardText,CardBody,CardImg} from 'reactstrap';
-
+import './ordering.css';
 import { connect } from 'react-redux';
 import { addToCart } from './components/actions/cartActions';
 import Cart from './cart';
@@ -16,8 +16,8 @@ class Ordering extends Component {
     let itemList = this.props.items.map(item=>{
     
     return (
-        <Card key={item.id}>
-        <CardBody onClick={()=>{this.handleClick(item.id)}}>
+        <Card key={item.id} >
+        <CardBody onClick={()=>{this.handleClick(item.id)}} className="hovering">
 
         <Row className="no-gutters">
         <Col md="3">
@@ -47,93 +47,22 @@ class Ordering extends Component {
   }
     )
 return(
-    <Container>
+    <Container className="container">
                 <Row>
                     {/****************** box1******************* */}
                         
                     <Col sm="5">
                     {itemList}
                     </Col>                       
-                    {/* <CardBody>
-                        <Row className="no-gutters">
-                        <Col md="3">
-                            <CardImg
-                            top
-                            width="100%"
-                            src="https://placeholdit.imgix.net/~text?txtsize=33&txt=318%C3%97180&w=318&h=180"
-                            alt="Card image cap"
-                            />
-                        </Col>
-                        <Col md="7">
-                            <CardBody>
-                            <CardTitle>Card title</CardTitle>
-                            </CardBody>
-                        </Col>
-                        <Col md="2">
-                        <CardBody>
-                            <CardTitle>$ 34</CardTitle>
-                            </CardBody>
-                      
-                        </Col>
-                        </Row>
-                    </CardBody>
-
-           
-                    <CardBody>
-                        <Row className="no-gutters">
-                        <Col md="3">
-                            <CardImg
-                            top
-                            width="100%"
-                            src="https://placeholdit.imgix.net/~text?txtsize=33&txt=318%C3%97180&w=318&h=180"
-                            alt="Card image cap"
-                            />
-                        </Col>
-                        <Col md="7">
-                            <CardBody>
-                            <CardTitle>Card title</CardTitle>
-                            </CardBody>
-                        </Col>
-                        <Col md="2">
-                        <CardBody>
-                            <CardTitle>$ 34</CardTitle>
-                            </CardBody>
-                      
-                        </Col>
-                        </Row>
-                    </CardBody>
-
-                    <CardBody>
-                        <Row className="no-gutters">
-                        <Col md="3">
-                            <CardImg
-                            top
-                            width="100%"
-                            src="https://placeholdit.imgix.net/~text?txtsize=33&txt=318%C3%97180&w=318&h=180"
-                            alt="Card image cap"
-                            />
-                        </Col>
-                        <Col md="7">
-                            <CardBody>
-                            <CardTitle>Card title</CardTitle>
-                            </CardBody>
-                        </Col>
-                        <Col md="2">
-                        <CardBody>
-                            <CardTitle>$ 34</CardTitle>
-                            </CardBody>
-                      
-                        </Col>
-                        </Row>
-                    </CardBody> */}
+                    
                     {/* ****************box 1 end************************* */}
 
             {/* *****************box2************************** */}
                    
       <Col sm="2">
         <CardBody>
-        <Button color="warning" >Add to Cart >></Button>{' '}
-        <Button color="warning">Remove from cart </Button>{' '}
+        <Button color="warning" style={{marginTop:'10em',marginBottom:'2em',borderRadius:'25px', width:'10em',cursor:'pointer'}} >Add to Cart >></Button>{' '}
+        <Button color="warning" style={{marginBottom:'5em',borderRadius:'25px',width:'10em',borderRadius:'25px',cursor:'pointer'}}>Remove from cart </Button>{' '}
 
         </CardBody>
       </Col>
@@ -145,7 +74,7 @@ return(
       <Col sm="5">
             <Cart />
             </Col>
-                    {/* ****************box 2 end************************* */}
+                    {/* ****************box 3 end************************* */}
 
     </Row>
     </Container>

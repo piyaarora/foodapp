@@ -1,0 +1,14 @@
+.container{
+    width:100%;
+    height:40em;
+    margin-top:7em;
+}
+.emptycart{
+    height:50em;
+    width:10em;
+    background:#ccc;
+}
+.hovering:hover{
+    background:#ffc107;
+    cursor:pointer;
+}

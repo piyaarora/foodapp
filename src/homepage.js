@@ -67,7 +67,7 @@ import { Container, Row, Col,Collapse,
                     <Col xs="12">
                         <p className="my-2" style={{color:'#aaa'}}>Choose one of our plans, enter delivery time and enjoy delicious food without leaving your home.</p>
                         <Button color="warning" style={{borderRadius:'25px', width:'10em'}}>Order Food</Button>{' '}
-                        <Col sm="12"> fa icons </Col>
+                        {/* <Col sm="12"> fa icons </Col> */}
                     </Col>
                 </Jumbotron>
             </Col>
